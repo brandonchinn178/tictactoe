@@ -2,7 +2,15 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/tictactoe.css')
+    script(src='/jquery.min.js')
+    script(src='/tictactoe.js')
   body
-      h1= title
-      p Welcome to #{title}
+      h1 Tic-Tac-Toe
+      .content
+        // for player information
+        p.info
+        // for game status
+        p.status Loading...
+        // game table
+        table#game
