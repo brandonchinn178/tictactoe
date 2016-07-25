@@ -1,11 +1,3 @@
-// An empty board, where null represents no players, and a square is
-// marked with the player's id
-var EMPTY_BOARD = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-];
-
 /**
  * Helper to convert coordinate points into coordinate objects
  *
@@ -38,6 +30,7 @@ var WIN_CONDITIONS = [
 var Game = function() {
     this.player1 = null;
     this.player2 = null;
+    this.board = null;
 };
 
 /**
@@ -101,8 +94,12 @@ Game.prototype.removePlayer = function(player) {
  * Resets the state to the start of a game
  */
 Game.prototype.startGame = function() {
-    // reset the board
-    this.board = EMPTY_BOARD;
+    // will be filled with player ids
+    this.board = [
+        [null, null, null],
+        [null, null, null],
+        [null, null, null],
+    ];
     // select the current player
     if (Math.floor(Math.random() * 2) === 0) {
         this.current_player = this.player1;

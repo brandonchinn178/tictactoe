@@ -1,9 +1,11 @@
 {
-  "name": "tictactoe",
-  "version": "0.0.0",
+  "name": "chinn-tictactoe",
+  "version": "1.0.0",
+  "description": "A simple tictactoe server for playing multiplayer online",
   "private": true,
-  "scripts": {
-    "start": "node app.js"
+  "main": "app.js",
+  "engines": {
+    "node": "6.2.1"
   },
   "dependencies": {
     "express": "=4.13.4",
