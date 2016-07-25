@@ -6,7 +6,7 @@ var app = express();
 var port = parseInt(process.env.PORT, 10) || 3000;
 var server = app.listen(port);
 
-var game = require('./tictactoe');
+var game = require('./lib/tictactoe');
 var io = require('socket.io')(server);
 
 app.set('views', path.join(__dirname, 'views'));
