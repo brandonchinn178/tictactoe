@@ -4,6 +4,10 @@
   "description": "A simple tictactoe server for playing multiplayer online",
   "private": true,
   "main": "app.js",
+  "scripts": {
+    "postinstall": "grunt build",
+    "start": "node app.js"
+  },
   "engines": {
     "node": "6.2.1"
   },
